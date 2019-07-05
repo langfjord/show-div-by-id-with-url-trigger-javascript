@@ -1,0 +1,12 @@
+USAGE
+
+1. Install script on page within the <body>
+
+2. Set the element with id=show1 you want to hide as display:none; (It does not need to be a div)
+
+3. Manilulate the url to show the content
+
+ - VALID: https://www.example.com/?show1
+ - VALID: https://www.example.com/?show2
+ - VALID: https://www.example.com/?show1show2
+ - INVALID: https://www.example.com/?show12 (unless you have defined show12 as a seperate id to show)
