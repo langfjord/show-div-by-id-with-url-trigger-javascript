@@ -1,19 +1,14 @@
 <script>
-  var url = window.location.href;
+  (function() {
+    var query = window.location.search.slice(1);
+    if (!query) return;
 
-	  var divtoshow = document.getElementById('show1');
-	  if( url.search( 'show1' ) > 0 ) {
-		  divtoshow.style.display = "block";
-	  }
-    
-    var divtoshow = document.getElementById('show2');
-	  if( url.search( 'show2' ) > 0 ) {
-		  divtoshow.style.display = "block";
-	  }
-    
-    var divtoshow = document.getElementById('show3');
-	  if( url.search( 'show3' ) > 0 ) {
-		  divtoshow.style.display = "block";
-	  }
-        
+    var matches = query.match(/show\d+/g) || [];
+    matches.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.style.display = "block";
+      }
+    });
+  })();
 </script>
