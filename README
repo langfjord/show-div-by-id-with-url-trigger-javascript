@@ -1,12 +1,16 @@
+Show Div By ID With URL Trigger
+
 USAGE
 
-1. Install script on page within the <body>
+1. Include script.js before the closing </body> tag.
+2. Add elements with ids like show1, show2, etc. Set them to display:none;.
+3. Manipulate the URL query string to show the content.
 
-2. Set the element with id=show1 you want to hide as display:none; (It does not need to be a div)
-
-3. Manilulate the url to show the content
+Examples:
 
  - VALID: https://www.example.com/?show1
  - VALID: https://www.example.com/?show2
- - VALID: https://www.example.com/?show1show2
- - INVALID: https://www.example.com/?show12 (unless you have defined show12 as a seperate id to show)
+ - VALID: https://www.example.com/?show1&show2
+ - INVALID: https://www.example.com/?show12 (unless you have defined show12 as a separate id to show)
+
+You can combine multiple ids by chaining them in the query string.
